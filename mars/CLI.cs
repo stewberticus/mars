@@ -2,7 +2,7 @@
 
 namespace mars
 {
-    class Program
+    public class Program
     {
         static String Usage()
         {
@@ -12,7 +12,7 @@ namespace mars
                    "<movement instructions any length String of : ('L','R','M')>" + Environment.NewLine;
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace mars
                 int grid_x = int.Parse(grid_points[0]);
                 int grid_y = int.Parse(grid_points[1]);
 
-                if(grid_x < 0 || grid_y < 0)
+                if (grid_x < 0 || grid_y < 0)
                 {
                     throw new FormatException();
                 }
@@ -86,7 +86,7 @@ namespace mars
                         {
                             throw new FormatException();
                         }
-                        
+
                         try
                         {
                             switch (x)
@@ -100,7 +100,7 @@ namespace mars
                                 case 'M':
                                     rover.Move();
                                     break;
-                                
+
                             }
                         }
                         catch (Rover.RoverOutOfBoundsException)
@@ -108,7 +108,7 @@ namespace mars
                             Console.Error.WriteLine("Rover instructed to move out of grid bounds, command ignored, rover remains in bounds");
                         }
                     }
-                    
+
 
                     Console.WriteLine(rover.ToString());
                 }
@@ -133,7 +133,6 @@ namespace mars
                 Console.Error.WriteLine("Unknown Failure");
 
             }
-
         }
     }
 }
