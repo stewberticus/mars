@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 using mars;
 namespace mars_test
@@ -84,7 +83,7 @@ namespace mars_test
             }
             catch (Rover.RoverOutOfBoundsException) { };
 
-            Rover rover = new Rover(new Point(1, 1), new Point(0, 0), Direction.North);
+            rover = new Rover(new Point(1, 1), new Point(0, 0), Direction.North);
 
             try
             {
