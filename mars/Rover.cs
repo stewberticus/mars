@@ -78,15 +78,11 @@ namespace mars
         {
             _dir_sm.TurnLeft();
 
-            //Console.WriteLine("Rover turned to face " + _dir_sm.ToString());
-
         }
 
         public void TurnRight()
         {
             _dir_sm.TurnRight();
-
-            //Console.WriteLine("Rover turned to face " + _dir_sm.ToString());
 
         }
 
